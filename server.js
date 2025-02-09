@@ -60,7 +60,7 @@ addressRoutes(app);
 ordersRoutes(app, upload);
 
 
-server.listen(3000,'192.168.100.19' || 'localhost', function(){
+server.listen(3000,'localhost', function(){
     console.log('Aplicación JuviExpress Backend '+process.pid+' iniciada...')
 });
 
