@@ -24,7 +24,8 @@ const ordersRoutes = require('./routes/orderRoutes');
 
 
 
-const port = process.env.PORT;
+//const port = process.env.PORT;
+const port = process.env.PORT || 10000;
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({
@@ -59,9 +60,13 @@ productRoutes(app, upload);
 addressRoutes(app);
 ordersRoutes(app, upload);
 
-
-server.listen(3000,'localhost', function(){
+/*
+server.listen(port,'localhost', function(){
     console.log('Aplicación JuviExpress Backend '+process.pid+' iniciada...')
+});*/
+
+server.listen(port, '0.0.0.0', function(){
+    console.log(`Aplicación JuviExpress Backend ${process.pid} iniciada en el puerto ${port}`);
 });
 
 app.get('/',(req,res)=>{
