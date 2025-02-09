@@ -1,0 +1,30 @@
+{
+  "name": "nodeproject",
+  "version": "1.0.0",
+  "description": "Backend de la app delivery JuviExpress",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "flutter",
+    "delivery",
+    "nodejs"
+  ],
+  "author": "Jhonathan Pizarra",
+  "license": "MIT",
+  "dependencies": {
+    "@google-cloud/storage": "^7.12.0",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "http": "^0.0.1-security",
+    "jsonwebtoken": "^9.0.2",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1",
+    "mysql": "^2.18.1",
+    "passport": "^0.4.1",
+    "passport-jwt": "^4.0.1",
+    "socket.io": "^2.4.1"
+  }
+}
