@@ -261,34 +261,6 @@ module.exports = {
         });
     },
 
-    async updateNotificationToken(req, res){
-        const id = req.body.id; //Capturo los datos que envie el cliente
-        const token = req.body.token;
-
-        console.log("Info ID:", id);
-        console.log("Info Token:", token);
-        console.log("Tenemos body?:", req.body);
-
-        User.updateNotificationToken(id, token, (err, id_user) =>{
-            if (err) {
-                return res.status(501).json({
-                    success: false,
-                    message: 'Hubo un error actualizando el token de notificaciones',
-                    error: err
-                });
-            }
-
-            return res.status(201).json({
-                success: true,
-                message: 'El usuario se actualizó correctamente',
-                data: id_user //El id del usuario que se registró
-            });    
-
-
-        });
-    },
-
-
 
     async  updateWithRoles(req, res) {
         const { user, roles } = req.body;

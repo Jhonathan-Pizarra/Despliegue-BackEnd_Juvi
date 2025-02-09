@@ -345,37 +345,4 @@ User.updateWithRol = (user, callback) => {
 };
 
 
-//Notificaiion push
-User.updateNotificationToken = (id, token, result) => {
-
-    const sql = `
-    UPDATE
-        users
-    SET
-        notification_token = ?,
-        updated_at = ?
-    WHERE
-        id = ?
-    `;
-
-    db.query
-    (
-        sql,
-        [
-            token,
-            new Date(),
-            id
-        ],
-        (err, res) => {
-            if (err) {
-                console.log('Error:', err);
-                result(err, null);
-            }
-            else {
-                result(null, id);
-            }
-        }
-    )
-}
-
 module.exports = User;
