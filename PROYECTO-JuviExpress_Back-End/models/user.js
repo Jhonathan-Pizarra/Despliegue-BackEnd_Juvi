@@ -28,7 +28,6 @@ User.findById = (id, result) => {
             U.phone,
             U.image,
             U.password,
-            U.notification_token,
             json_arrayagg(
                 json_object(
                     'id', CONVERT(R.id, char),

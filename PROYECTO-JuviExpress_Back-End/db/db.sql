@@ -5,7 +5,6 @@ create table users(
     email varchar(180) not null unique,
     name varchar(90) not null,
     lastname varchar(90) not null,
-    notification_token varchar(255),
     phone varchar(20) not null unique,
     image varchar(255) null,
     password varchar(90) not null,

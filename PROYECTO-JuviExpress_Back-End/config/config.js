@@ -1,9 +1,9 @@
 const mysql = require('mysql');
 const db = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: '123123',
-    database: 'juviexpress_bdd'
+    host: 'mysql-juviexpressapp.alwaysdata.net',
+    user: '384601',
+    password: 'Uchih4Jhonathan23',
+    database: 'juviexpressapp_2024'
 });
 
 db.connect(function(err) {
